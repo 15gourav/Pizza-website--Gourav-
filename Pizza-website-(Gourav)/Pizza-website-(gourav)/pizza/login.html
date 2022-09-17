@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- This website  was created by: Gourav C0810482-->
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <title>Login</title>
+    <style>
+      #regHere {
+        color: #4caf50;
+      }
+    </style>
+  </head>
+  <body background="image/ss.jpg">
+    <body>
+      <div class="login-page">
+        <div class="form">
+          <div class="login">
+            <div class="login-header">
+              <h3>LOGIN</h3>
+              <p>Please enter your credentials to login.</p>
+            </div>
+          </div>
+          <form
+            class="login-form"
+            onsubmit="return verifyUser()"
+            action="index.html"
+          >
+            <input type="text" id="username" placeholder="username" />
+            <input type="password" id="pswd" placeholder="password" /><br />
+            <span id="message" style="color: red"> </span>
+            <!-- <a href="reservation1.html"> -->
+            <input id="bton" type="submit" value="Login" />
+            <a id="regHere" href="register.html">New User ? Register Here</a>
+          </form>
+        </div>
+      </div>
+      <script>
+        function verifyUser() {
+          const emailBox = document.getElementById('username').value
+          const pwdBox = document.getElementById('pswd').value
+
+          if (
+            !localStorage.getItem(emailBox) ||
+            localStorage.getItem(emailBox) != pwdBox
+          ) {
+            alert('Wrong Credentials.')
+            return false
+          }
+          return true
+        }
+        function verifyPassword() {
+          var pw = document.getElementById('pswd').value
+          //check empty password field
+          if (pw == '') {
+            document.getElementById('message').innerHTML =
+              '**Fill the password please!'
+            return false
+          }
+
+          //minimum password length validation
+          if (pw.length < 8) {
+            document.getElementById('message').innerHTML =
+              '**Password length must be atleast 8 characters'
+            return false
+          }
+
+          //maximum length of password validation
+          if (pw.length > 15) {
+            document.getElementById('message').innerHTML =
+              '**Password length must not exceed 15 characters'
+            return false
+          } else {
+          }
+        }
+      </script>
+    </body>
+  </body>
+</html>

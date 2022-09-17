@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- This website  was created by: Gourav C0810482-->
+
+  <head>
+    <title>Gourav</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+  </head>
+  <style>
+    body {
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.75),
+          rgba(0, 0, 0, 0.45),
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0)
+        ),
+        url('image/13.jpg') no-repeat;
+      background-size: cover;
+      color: black;
+      height: 110%;
+    }
+    .table {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 4em;
+
+      opacity: 70%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      height: 80%;
+      background-color: blue;
+    }
+
+    .footer {
+      text-align: center;
+      border: 1px solid black;
+      background-color: rgb(7, 7, 7);
+      color: beige;
+      margin-top: 0.5em;
+      width: 100%;
+      position: fixed;
+    }
+
+    footer,
+    a {
+      color: rgb(182, 163, 59);
+    }
+    .btn {
+      width: 200px;
+      height: 50px;
+      background-color: #e3e3e3;
+      border-radius: 10px;
+    }
+    #headin {
+      color: white;
+      font-size: 30px;
+    }
+    #pizza-details {
+      width: 40%;
+      margin-top: 100px;
+      text-align: center;
+      padding: 5px;
+      font-size: 21px;
+      border-radius: 10px;
+      background-color: rgba(194, 172, 172, 0.897);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #outer-div {
+      color: rgb(14, 5, 5);
+      height: 90%;
+      align-content: center;
+    }
+    #headin {
+      color: white;
+      font-size: 30px;
+    }
+
+    #cart {
+      width: 60%;
+      margin-top: 100px;
+      text-align: justify;
+      padding: 20px;
+      font-size: 21px;
+      border-radius: 10px;
+      background: rgba(167, 167, 167, 0.897);
+      margin-left: auto;
+      margin-right: auto;
+      height: 70%;
+      align-content: center;
+      border: 3px solid #fff;
+    }
+    #imgDiv {
+      padding: 20px;
+    }
+    #pizza-desc {
+      margin-top: 10px;
+      padding: 20px;
+    }
+  </style>
+
+  <body>
+    <!-- Use the nav area to add hyperlinks to other pages within the website -->
+    <header>
+      <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="menu.html" class="active">Menu</a>
+        
+        <a href="contact.html">Contact us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </header>
+
+    <!-- Use the main area to add the main content of the webpage -->
+    <div id="outer-div">
+      <p>Cart Items</p>
+      <div id="cart">
+        <center>
+          <div id="imgDiv">
+            <img src="image/new_pizza_5.jpg" height="200px" width="200px" />
+          </div>
+        </center>
+        <center>
+          <div id="pizza-desc">
+            <strong>Crisp Capsicum with Tomato Pizza</strong>
+            <br /><br />
+            <p>
+              Black Olives I Onion I Capsicum I Grilled Mushroom I Peri Peri
+              Chicken I Chicken Rashers I Pepper Barbecue Chicken
+            </p>
+            <small><strong>Price - $15.00</strong></small>
+          </div>
+        </center>
+      </div>
+    </div>
+    <!-- Use the footer area to add webpage footer content -->
+    <footer class="footer">
+      Slice of Heaven &copy; Copyright 2021<br />
+      Gourav C0810482. All Rights
+      Reserved.<br />
+      <a href="mailto:myfavpizza@gmail.com">myfavpizza@gmail.com.com</a>
+    </footer>
+  </body>
+</html>
+<script src="orders.js"></script>
+<script>
+  function myFunction() {
+    var x = document.getElementById('myTopnav')
+    if (x.className === 'topnav') {
+      x.className += ' responsive'
+    } else {
+      x.className = 'topnav'
+    }
+  }
+</script>

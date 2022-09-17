@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- This website  was created by: Gourav C0810482-->
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Gourav</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <style>
+      #container {
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        background-color: wheat;
+        margin: 0 auto;
+        width: 800px;
+        padding: 10px 20px;
+        border-radius: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      #button {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      label {
+        float: left;
+        width: 11em;
+        text-align: right;
+      }
+
+      input {
+        width: 14em;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 0.5em;
+      }
+
+      #submit,
+      #reset {
+        width: 140px;
+        height: 30px;
+        margin-top: 25px;
+        border-radius: 8px;
+        border: none;
+        background-color: rgb(175, 170, 160);
+        color: black;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      label.error {
+        float: none;
+        color: red;
+        font-size: 87.5%;
+      }
+      .footer {
+        color: white;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgb(7, 7, 7);
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+      }
+
+      .footer a {
+        color: rgb(182, 163, 59);
+      }
+      @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {
+          display: none;
+        }
+
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .topnav.responsive {
+          position: relative;
+        }
+
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+      .topnav {
+        overflow: hidden;
+        color: rgb(240, 238, 236);
+        float: right;
+        margin-right: 5em;
+      }
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .topnav a:hover {
+        background-color: rgb(103, 110, 116);
+        color: black;
+      }
+
+      .topnav a.active {
+        background-color: rgb(95, 129, 151);
+        color: white;
+      }
+
+      .topnav .icon {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body background="image/tt.jpg">
+    <header>
+      <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="menu.html">Menu</a>
+      
+        <a href="login.html"  class="active">Login</a>
+        <a href="contact.html">Contact us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </header>
+    <div id="container">
+      <h1>Register with us</h1>
+      <center>
+        <form name="register_form" id="register_form" action="login.html">
+          <label for="email">Email Address:</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            autofocus
+            placeholder="abc@gmail.com"
+          /><br />
+          <label for="retype">Re-enter Email Address:</label>
+          <input
+            type="text"
+            name="retype"
+            id="retype"
+            autofocus
+            placeholder="abc@gmail.com"
+          /><br />
+          <label for="pass">Password:</label>
+          <input type="password" id="pass" name="pass" autofocus /><br />
+          <label for="first_name">First Name:</label>
+          <input type="text" name="first_name" id="first_name" /><br />
+          <label for="last_name">Last Name:</label>
+          <input type="text" name="last_name" id="last_name" /><br />
+          <label for="state">2-Character State Code:</label>
+          <input
+            type="text"
+            name="state"
+            id="state"
+            placeholder="2-character code"
+          /><br />
+          <label for="zip">5-Digit ZIP Code:</label>
+          <input
+            type="text"
+            name="zip"
+            id="zip"
+            placeholder="99999 or 99999-9999"
+          /><br />
+
+          <div id="button">
+            <input type="submit" id="submit" value="Register" />
+            <input type="reset" id="reset" value="Reset" /><br />
+          </div>
+        </form>
+      </center>
+    </div>
+    <footer class="footer">
+      Slice of Heaven &copy; Copyright 2021<br />
+      Gourav C0810482. All Rights
+      Reserved.<br />
+      <a href="mailto:myfavpizza@gmail.com">myfavpizza@gmail.com.com</a>
+    </footer>
+  </body>
+  <script>
+    const email = document.getElementById('email')
+    const pwd = document.getElementById('pass')
+    const joinBtn = document.getElementById('submit')
+
+    joinBtn.onclick = function () {
+      const emailVal = email.value
+      const pwdVal = pwd.value
+
+      if (emailVal && pwdVal) {
+        localStorage.setItem(emailVal, pwdVal)
+        location.reload()
+      }
+    }
+    /* Register Form created by: 
+        Karanpreet Kaur, Student ID- C0799217, Term- 02, Group- 02 */
+    $(document).ready(function () {
+      jQuery.validator.addMethod(
+        'charactersonly',
+        function (value, element) {
+          return this.optional(element) || /^[a-z\s]+$/i.test(value)
+        },
+        'Enter only alphabetical characters'
+      )
+      $('#email').focus()
+      $('#register_form').validate({
+        rules: {
+          email: {
+            required: true,
+            email: true,
+          },
+
+          retype: {
+            required: true,
+            equalTo: '#email',
+          },
+          pass: {
+            required: true
+          },
+          first_name: {
+            required: true,
+            charactersonly: true,
+          },
+          last_name: {
+            required: true,
+            charactersonly: true,
+          },
+          state: {
+            required: true,
+            rangelength: [2, 2],
+            charactersonly: true,
+          },
+          zip: {
+            required: true,
+            rangelength: [5, 5],
+          },
+        },
+      }) // end validate
+    }) // end ready
+  </script>
+</html>

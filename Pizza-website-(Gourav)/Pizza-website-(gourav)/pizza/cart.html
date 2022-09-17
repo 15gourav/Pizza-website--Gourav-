@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- This website  was created by: Gourav C0810482-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <style>
+      body {
+        background: url('image/bg_img.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        /* height: 120%;   */
+      }
+
+      .topnav {
+        overflow: hidden;
+        color: rgb(240, 238, 236);
+        float: right;
+        margin-right: 5em;
+      }
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .topnav a:hover {
+        background-color: rgb(103, 110, 116);
+        color: black;
+      }
+
+      .topnav a.active {
+        background-color: rgb(95, 129, 151);
+        color: white;
+      }
+
+      .topnav .icon {
+        display: none;
+      }
+
+      #cart-section {
+        display: block;
+        color: black;
+        margin-top: auto;
+      }
+      #headin {
+        color: transparent;
+        font-size: 30px;
+      }
+
+      #cart {
+        width: 80%;
+        margin-top: 100px;
+        text-align: center;
+        padding: 5px;
+        font-size: 21px;
+        border-radius: 10px;
+        background: rgba(167, 167, 167, 0.897);
+        margin-left: auto;
+        display: block;
+        margin-right: auto;
+      }
+
+      #cart button {
+        margin: 2px;
+        height: 30px;
+        width: 80px;
+        color: black;
+        font-size: medium;
+        font-weight: bold;
+        border-radius: 12px;
+        border: 2px rgba(255, 255, 255, 0.411) SOLID;
+        background-color: rgba(189, 189, 189, 0.596);
+      }
+
+      #total {
+        color: black;
+        width: 50%;
+        margin-top: 20px;
+        margin-left: 50%;
+        text-align: center;
+        padding: 5px;
+        font-size: 40px;
+        border-radius: 10px;
+        background-color: rgba(189, 189, 189, 0.596);
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #order {
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        margin-right: 0px;
+        font-size: 40px;
+        background: rgba(167, 167, 167, 0.897);
+      }
+      #back {
+        color:white;
+        text-decoration: none;
+        text-align: center;
+        margin-right: 60px;
+        font-size: 40px;
+        background: rgba(167, 167, 167, 0.897);
+      }
+      table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .footer {
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgb(7, 7, 7);
+        bottom: 0;
+        width: 100%;
+        /* position: fixed; */
+      }
+
+      .footer a {
+        color: rgb(182, 163, 59);
+      }
+    </style>
+  </head>
+  <body onload="getitems()">
+    <header>
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About us</a>
+        <a href="menu.html">Menu</a>
+        
+        <a href="register.html">Register</a>
+        <a href="contact.html">Contact us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </header>
+    <div id="cart-section">
+      <p id="headin">Cart Items</p>
+      <div id="cart"></div>
+    </div>
+    <div>
+      <p id="total">total =</p>
+      <div>
+        <center>
+          <table>
+            <th><a id="back" href="menu.html">Back</a></th>
+            <th><a id="order" href="login.html">Place Order</a></th>
+          </table>
+        </center>
+      </div>
+      <!-- <a id="order" href="onlineorder.html"> Place Order</a> -->
+    </div>
+    <!-- <footer class="footer">
+      Slice of Heaven &copy; Copyright 2021<br />
+      Pardeep Kaur C0812203, Karanpreet Kaur C0799217, Gourav C0810482. All Rights
+      Reserved.<br />
+      <a href="mailto:myfavpizza@gmail.com">myfavpizza@gmail.com.com</a>
+    </footer> -->
+  </body>
+</html>
+<script src="orders.js"></script>
